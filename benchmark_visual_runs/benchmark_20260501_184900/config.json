@@ -1,0 +1,53 @@
+{
+  "base_cfg": {
+    "sample_rate": 2000000.0,
+    "center_frequency": 907980000.0,
+    "seconds": 3.0,
+    "tx_args": "hackrf=0",
+    "rx_args": "hackrf=1",
+    "tx_rf_gain": 14.0,
+    "tx_if_gain": 47.0,
+    "tx_bb_gain": 20.0,
+    "tx_scale": 0.07,
+    "rx_rf_gain": 7.7,
+    "rx_if_gain": 20.0,
+    "rx_bb_gain": 20.0,
+    "alpha_sync": 0.9
+  },
+  "val_cfg": {
+    "use_magic_validation": true,
+    "magic": "OFDM",
+    "num_packets": 200,
+    "packet_len": 50,
+    "payload_bytes": 4096,
+    "use_crc": false,
+    "record_channel_taps": true
+  },
+  "est_cfg": {
+    "estimators": [
+      "native_ls",
+      "python_ls",
+      "frozen_ls_nframes",
+      "svr_frozen_async_precorrected",
+      "svr_freq_async"
+    ],
+    "freeze_after_frames": 2,
+    "svr_c": 100.0,
+    "svr_gamma": "scale",
+    "svr_epsilon": 0.001,
+    "svr_window_frames": 20,
+    "svr_min_train_frames": 5
+  },
+  "sweep_cfg": {
+    "snr_values": [
+      10.0,
+      20.0,
+      30.0,
+      40.0,
+      50.0
+    ],
+    "repetitions": 10,
+    "seed0": 12345,
+    "enable_noise": true
+  }
+}

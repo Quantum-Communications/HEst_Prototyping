@@ -1,0 +1,7 @@
+gr-osmosdr 0.2.0.0 (0.2.0) gnuradio 3.10.11.0
+built-in source types: file fcd rtl rtl_tcp uhd hackrf rfspace airspy soapy redpitaya 
+Using HackRF One with firmware v2.0.0
+gr-osmosdr 0.2.0.0 (0.2.0) gnuradio 3.10.11.0
+built-in sink types: uhd hackrf soapy redpitaya file 
+Using HackRF One with firmware v2.0.1
+UUUUOOOOO
