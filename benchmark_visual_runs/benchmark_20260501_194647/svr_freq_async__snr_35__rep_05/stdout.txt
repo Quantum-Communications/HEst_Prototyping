@@ -1,0 +1,71 @@
+delay :info: set_min_output_buffer on block 20 to 16384
+multiply_cc :info: set_min_output_buffer on block 21 to 16384
+header_payload_demux :info: set_min_output_buffer on block 22 to 16384
+fft_v_fftw :info: set_min_output_buffer on block 23 to 16384
+fft_v_fftw :info: set_min_output_buffer on block 24 to 16384
+ofdm_frame_equalizer_vcvc :info: set_min_output_buffer on block 27 to 32768
+ofdm_frame_equalizer_vcvc :info: set_min_output_buffer on block 28 to 32768
+ofdm_serializer_vcc :info: set_min_output_buffer on block 29 to 32768
+ofdm_serializer_vcc :info: set_min_output_buffer on block 30 to 32768
+=== Integrated OFDM Experiment ===
+payload: /home/pesquisa/HEst_Prototyping/ofdm_modularizer/ofdm_split/benchmark_visual_runs/benchmark_20260501_194647/svr_freq_async__snr_35__rep_05/tx_payload.bin
+payload_bytes: 4096
+seed: 12349
+use_magic_validation: True
+magic: OFDM
+num_packets: 200
+packet_len: 50
+rx_output: /home/pesquisa/HEst_Prototyping/ofdm_modularizer/ofdm_split/benchmark_visual_runs/benchmark_20260501_194647/svr_freq_async__snr_35__rep_05/rx_payload.bin
+sample_rate: 2000000.0
+center_frequency: 907980000.0
+seconds: 3.0
+--- TX configuration ---
+tx_args: hackrf=0
+tx_rf_gain: 14.0
+tx_if_gain: 47.0
+tx_bb_gain: 20.0
+tx_scale: 0.07
+--- RX configuration ---
+rx_args: hackrf=1
+rx_rf_gain: 7.7
+rx_if_gain: 20.0
+rx_bb_gain: 20.0
+alpha_sync: 0.9
+--- Common options ---
+use_crc: False
+enable_noise: True
+snrdb: 35.0
+noise_voltage: 0.01778279410038923
+--- RX buffers ---
+source_max_buffer: 8192
+general_min_buffer: 16384
+critical_min_buffer: 32768
+--- Magic validation ---
+magic: OFDM
+num_packets: 200
+packet_len: 50
+tx_packets_emitted: 5259
+rx_packets_parsed: 243
+matched_packets: 140
+missing_packets: 60
+--- Metrics ---
+BER (conditional): 0.02115221088435374
+BER (global): 0.31480654761904764
+PER: 0.3
+Detection rate: 1.215
+RX parse rate: 0.04620650313747861
+--- Channel variation ---
+recorded_frames: 837
+tap_power_mean: 260.5621032714844
+tap_power_std: 164.1605224609375
+tap_delta_mean: 1.2279648780822754
+tap_delta_std: 4.775585174560547
+tap_delta_rel_mean: 0.09821245074272156
+tap_delta_rel_std: 0.4373164474964142
+--- SVR async worker ---
+worker_frames_started: 113
+worker_frames_completed: 113
+worker_batches_skipped: 4
+worker_last_batch_size: 20
+svr_window_frames: 20
+svr_min_train_frames: 5

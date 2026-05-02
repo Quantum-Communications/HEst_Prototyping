@@ -1,0 +1,64 @@
+delay :info: set_min_output_buffer on block 20 to 16384
+multiply_cc :info: set_min_output_buffer on block 21 to 16384
+header_payload_demux :info: set_min_output_buffer on block 22 to 16384
+fft_v_fftw :info: set_min_output_buffer on block 23 to 16384
+fft_v_fftw :info: set_min_output_buffer on block 24 to 16384
+ofdm_frame_equalizer_vcvc :info: set_min_output_buffer on block 27 to 32768
+ofdm_frame_equalizer_vcvc :info: set_min_output_buffer on block 28 to 32768
+ofdm_serializer_vcc :info: set_min_output_buffer on block 29 to 32768
+ofdm_serializer_vcc :info: set_min_output_buffer on block 30 to 32768
+=== Integrated OFDM Experiment ===
+payload: /home/pesquisa/HEst_Prototyping/ofdm_modularizer/ofdm_split/benchmark_visual_runs/benchmark_20260501_194647/python_ls__snr_45__rep_04/tx_payload.bin
+payload_bytes: 4096
+seed: 12348
+use_magic_validation: True
+magic: OFDM
+num_packets: 200
+packet_len: 50
+rx_output: /home/pesquisa/HEst_Prototyping/ofdm_modularizer/ofdm_split/benchmark_visual_runs/benchmark_20260501_194647/python_ls__snr_45__rep_04/rx_payload.bin
+sample_rate: 2000000.0
+center_frequency: 907980000.0
+seconds: 3.0
+--- TX configuration ---
+tx_args: hackrf=0
+tx_rf_gain: 14.0
+tx_if_gain: 47.0
+tx_bb_gain: 20.0
+tx_scale: 0.07
+--- RX configuration ---
+rx_args: hackrf=1
+rx_rf_gain: 7.7
+rx_if_gain: 20.0
+rx_bb_gain: 20.0
+alpha_sync: 0.9
+--- Common options ---
+use_crc: False
+enable_noise: True
+snrdb: 45.0
+noise_voltage: 0.005623413251903491
+--- RX buffers ---
+source_max_buffer: 8192
+general_min_buffer: 16384
+critical_min_buffer: 32768
+--- Magic validation ---
+magic: OFDM
+num_packets: 200
+packet_len: 50
+tx_packets_emitted: 5259
+rx_packets_parsed: 2059
+matched_packets: 192
+missing_packets: 8
+--- Metrics ---
+BER (conditional): 0.0181671626984127
+BER (global): 0.05744047619047619
+PER: 0.04
+Detection rate: 10.295
+RX parse rate: 0.3915193002471953
+--- Channel variation ---
+recorded_frames: 2087
+tap_power_mean: 1572.189208984375
+tap_power_std: 111.09817504882812
+tap_delta_mean: 51.06729507446289
+tap_delta_std: 22.006990432739258
+tap_delta_rel_mean: 1.3286336660385132
+tap_delta_rel_std: 1.8805418014526367
