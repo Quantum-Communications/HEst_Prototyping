@@ -1,0 +1,66 @@
+{
+  "phy": {
+    "fft_length": 64,
+    "cp_length": 16,
+    "packet_length_bytes": 50,
+    "packet_gap_samples": 80,
+    "sample_rate": 8000000,
+    "digital_scale": 0.0167,
+    "sync_threshold": 0.65,
+    "gate_power": 5e-05,
+    "equalizer_alpha": 0.1
+  },
+  "radio": {
+    "tx_serial": "SET_TX_SERIAL",
+    "rx_serial": "SET_RX_SERIAL",
+    "center_frequency": 907980000,
+    "bandwidth": 6000000,
+    "tx_rf_gain": 14,
+    "tx_if_gain": 47,
+    "rx_rf_gain": 14,
+    "rx_if_gain": 32,
+    "rx_bb_gain": 20
+  },
+  "methods": [
+    {
+      "name": "ls"
+    },
+    {
+      "name": "lmmse"
+    },
+    {
+      "name": "svr_skdirect_rbf",
+      "parameters": {
+        "c": 9.615,
+        "epsilon": 0.02
+      }
+    },
+    {
+      "name": "qsvr_skdirect_cx_shots",
+      "parameters": {
+        "c": 9.615,
+        "epsilon": 0.02,
+        "quantum_gram_path": "../data/config/cx_4000.npz"
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "name": "natural"
+    }
+  ],
+  "equalizers": [
+    "static",
+    "pilot_cpe",
+    "simpledfe"
+  ],
+  "workers": 6,
+  "bursts": 20,
+  "batch_size": 1,
+  "measurement_packets": 100,
+  "seed": 550010,
+  "timeout_seconds": 900,
+  "required_gnu_version": "3.10.11.0",
+  "session_id": "SET_SESSION_ID",
+  "channel_description": "SET_PHYSICAL_PLACEMENT_AND_ENVIRONMENT"
+}

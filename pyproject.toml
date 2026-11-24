@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "qml-ofdm-tcc"
+version = "1.0.0"
+description = "OFDM channel-estimation experiment: LS, LMMSE, SVR and QSVR"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "GPL-3.0-or-later"
+authors = [{name = "Caio Neves Silva"}]
+dependencies = ["numpy>=1.26,<3", "scipy>=1.11,<2", "scikit-learn>=1.4,<2", "threadpoolctl>=3.2"]
+[project.optional-dependencies]
+quantum = ["qiskit>=2.2,<2.3"]
+plots = ["matplotlib>=3.8,<4", "pandas>=2,<4"]
+dev = ["pytest>=8,<10"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

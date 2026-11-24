@@ -1,0 +1,4 @@
+# Preserva os bytes das medições e dos registros validados por SHA-256 no checkout.
+data/** -text
+data/**/*.csv -diff
+*.npz binary

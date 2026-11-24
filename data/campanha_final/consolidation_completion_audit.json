@@ -1,0 +1,29 @@
+{
+  "master_cells_original_sha256": "319ac85580e120b36674f720e767a995987c3f3ce822714cd101dbe4968eb264",
+  "master_aggregates_original_sha256": "ae7ff2cbbe77a0908133cb67a06fc8fd843693b602cd5af026bee6f5b9a75dff",
+  "master_cells": 53680,
+  "master_aggregates": 688,
+  "matched_rows": 53680,
+  "unmatched_rows": 0,
+  "missing_sources": [],
+  "field_coverage": {
+    "receiver_seconds": 53680,
+    "fit_seconds": 53680,
+    "initialization_seconds": 53680,
+    "kernel_seconds": 53680,
+    "backend_import_seconds": 53680,
+    "worker_wall_seconds": 53680,
+    "fit_calls": 53680,
+    "fit_failures": 53680,
+    "evm_rms": 53676,
+    "evm_error_energy": 53680,
+    "evm_reference_energy": 53680,
+    "evm_symbols": 53680,
+    "evm_matched_packets": 53680,
+    "evm_scope": 53680,
+    "training_seconds": 27040,
+    "prediction_seconds": 27040
+  },
+  "unmatched_examples": [],
+  "note": "Tempos observados do host. Comparar por configura\u00e7\u00e3o de workers e regime de concorr\u00eancia. Custos de prepara\u00e7\u00e3o externa do Gram CX n\u00e3o s\u00e3o inferidos."
+}
